@@ -40,7 +40,7 @@ jobs:
             tail output.txt
   use-command:
     docker:
-      -image: circleci/node:13.8.0
+      - image: circleci/node:13.8.0
     steps:
       - print-to-pipeline:
           to: "Kevin"
