@@ -22,6 +22,7 @@ jobs:
           name: World
           command: |
             echo World
+            echo << MY_NAME >>
 
 workflows:
   # Name the workflow "welcome"
