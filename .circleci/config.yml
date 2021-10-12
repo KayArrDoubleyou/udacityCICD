@@ -40,7 +40,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - print-pipeline-id
-      - run: eko "hello"
+      - run: echo "hello"
       - run:
           name: on error
           command: echo "ERROR!"
