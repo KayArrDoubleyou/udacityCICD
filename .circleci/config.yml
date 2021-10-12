@@ -5,7 +5,7 @@ commands:
   print-pipeline-id:
     description: "simple command"
     steps:
-      - run: return 1
+      - run: echo "simple command"
       
 # Use a package of configuration called an orb.
 orbs:
@@ -40,6 +40,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - print-pipeline-id
+      - run: return 1
+      - run:
+          name: on error
+          command: echo "ERROR!"
+          when: on_fail
       
 workflows:
   # Name the workflow "welcome"
